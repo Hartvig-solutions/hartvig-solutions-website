@@ -1,21 +1,104 @@
-# Privacy Policy
+# Privacy Policy for Zip Flow
 
-At Zip Flow, your privacy is a top priority. This Privacy Policy explains how we handle any personal information or data associated with your use of the Zip Flow application ("the App").
+Last updated: July 15, 2026
 
-## 1. Data Collection
-We do not collect, store, or share any personal, identifiable data. Any game progress, stars earned, or preferences set within the App are stored entirely locally on your device using Shared Preferences.
+Hartvig Solutions ("we", "us", or "our") provides the Zip Flow mobile
+application (the "App"). This policy explains what data is processed when you
+use the App and why.
+
+## 1. Data processed by the App
+
+Zip Flow stores puzzle progress, stars, hints, settings, streaks, and cosmetic
+choices locally on your device. We do not ask for your name, email address,
+phone number, or payment-card details inside the App.
+
+If you choose to use cloud save, progress data is also stored through Apple
+Game Center/iCloud or Google Play Games Saved Games. The relevant platform may
+process your platform account identifier and player information under its own
+privacy policy.
+
+When signed in to Game Center or Google Play Games, the App also submits
+achievement progress and your best Daily streak. The Daily leaderboard may
+display platform profile names, ranks, and streak scores supplied by Apple or
+Google, including friend or global scores depending on platform availability.
+
+Daily reminder preferences and scheduled local notifications are handled on
+your device. Zip Flow does not use a server to send marketing notifications.
 
 ## 2. Analytics
-The App utilizes basic, anonymized analytics (e.g., Firebase) to track user retention and level completion rates. This helps us understand which levels are too hard or too easy. This data does not contain identifiable information such as your name, email address, or specific device identifiers.
 
-## 3. In-App Purchases and Subscriptions
-Currently, the App utilizes platforms (e.g., Apple App Store or Google Play) to process In-App Purchases. Payment information is securely handled by the respective store. We do not have access to, nor do we store, your credit card or billing information. Purchase validation tokens may be used to verify transactions securely.
+The App uses Firebase Analytics to understand general usage, such as screens
+viewed, level completion, hint use, and purchase events. Firebase may process
+app-instance or device identifiers, device and operating-system information,
+approximate location derived from network information, and interaction data.
+We use this information to improve gameplay, stability, and level balance; we
+do not use it to identify you by name.
 
-## 4. Third-Party Links
-The App may contain links to our social media, App Store ratings page, or websites. If you click on a third-party link, you will be directed to that site. We strongly advise you to review the Privacy Policy of every site you visit.
+## 3. Advertising and consent
 
-## 5. Changes to This Privacy Policy
-We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
+Non-Pro users may see ads provided by Google AdMob. The App uses Google's User
+Messaging Platform (UMP) to request and store privacy choices where required.
+Depending on your region and choices, Google and its advertising partners may
+process device identifiers, IP-based approximate location, ad interactions,
+diagnostic information, and local storage to provide, measure, or personalise
+ads.
 
-## 6. Contact Us
-If you have any questions or suggestions regarding our Privacy Policy, do not hesitate to contact us at support@hartvigsolutions.com.
+Where required, you can review or change advertising privacy choices from the
+App's Settings screen. Buying the full game removes ads from Zip Flow, but does
+not disable the analytics described above.
+
+## 4. In-app purchases
+
+Purchases are processed by Apple App Store or Google Play. We do not receive or
+store your payment-card details. The App uses RevenueCat to validate purchases
+and manage the full-game entitlement. RevenueCat processes an anonymous App
+User ID, app/device technical information, purchase receipts or Google purchase
+tokens, product identifiers, and transaction history for purchase validation,
+fraud prevention, customer support, and purchase analytics.
+
+## 5. Legal basis and choices
+
+Where applicable, necessary processing is used to provide requested App
+features and purchases. Analytics is used for our legitimate interest in
+improving the App. Advertising-related processing that requires consent is
+performed according to the choices collected through UMP. You may withdraw or
+change those choices through Settings when the privacy-options entry is
+required.
+
+You can remove local App data by deleting the App. Cloud saves, purchase
+records, analytics data, and advertising data are controlled or retained by the
+relevant service provider according to its policy and legal obligations. To ask
+about access, correction, or deletion of data under applicable law, contact us
+at the address below.
+
+## 6. Third-party services
+
+The App uses services governed by their own terms and privacy policies:
+
+- [Google Privacy Policy](https://policies.google.com/privacy) (Firebase,
+  AdMob, Google Play, and Play Games)
+- [Firebase Privacy and Security](https://firebase.google.com/support/privacy)
+- [RevenueCat Privacy Policy](https://www.revenuecat.com/privacy-policy)
+- [Apple Privacy Policy](https://www.apple.com/legal/privacy/) (App Store,
+  Game Center, and iCloud)
+
+The App may also open external store, rating, or sharing destinations. Review
+the destination's privacy policy before providing information there.
+
+## 7. International processing and security
+
+Third-party providers may process data in countries other than the country in
+which you live. We use established platform providers and encrypted network
+connections, but no electronic storage or transmission method can be guaranteed
+to be completely secure.
+
+## 8. Changes to this policy
+
+We may update this policy when the App or legal requirements change. The latest
+version will show its effective date at the top.
+
+## 9. Contact
+
+Hartvig Solutions
+
+Email: support@hartvigsolutions.com

@@ -12,37 +12,37 @@ document.addEventListener('DOMContentLoaded', () => {
     // CONSTANTS
     // ================================================================
     const POI_COLORS = {
-        'Green':               '#16a34a',
-        'Green Bunker':        '#84cc16',
-        'Fairway Bunker':      '#eab308',
-        'Water':               '#0284c7',
-        'Trees':               '#166534',
-        '100 Marker':          '#dc2626',
-        '150 Marker':          '#f87171',
-        '200 Marker':          '#991b1b',
-        'Dogleg':              '#9333ea',
-        'Road':                '#94a3b8',
-        'Tee':                 '#ea580c',
-        'Out of Bounds':       '#e2e8f0',
+        'Green': '#16a34a',
+        'Green Bunker': '#84cc16',
+        'Fairway Bunker': '#eab308',
+        'Water': '#0284c7',
+        'Trees': '#166534',
+        '100 Marker': '#dc2626',
+        '150 Marker': '#f87171',
+        '200 Marker': '#991b1b',
+        'Dogleg': '#9333ea',
+        'Road': '#94a3b8',
+        'Tee': '#ea580c',
+        'Out of Bounds': '#e2e8f0',
         'Penalty Area Yellow': '#facc15',
-        'Penalty Area Red':    '#ef4444',
+        'Penalty Area Red': '#ef4444',
     };
 
     const POI_GEO_DEFAULT = {
-        'Green':               'Polygon',
-        'Green Bunker':        'Polygon',
-        'Fairway Bunker':      'Polygon',
-        'Water':               'Polygon',
-        'Trees':               'Polygon',
-        '100 Marker':          'Point',
-        '150 Marker':          'Point',
-        '200 Marker':          'Point',
-        'Dogleg':              'Point',
-        'Road':                'LineString',
-        'Tee':                 'Polygon',
-        'Out of Bounds':       'LineString',
+        'Green': 'Polygon',
+        'Green Bunker': 'Polygon',
+        'Fairway Bunker': 'Polygon',
+        'Water': 'Polygon',
+        'Trees': 'Polygon',
+        '100 Marker': 'Point',
+        '150 Marker': 'Point',
+        '200 Marker': 'Point',
+        'Dogleg': 'Point',
+        'Road': 'LineString',
+        'Tee': 'Polygon',
+        'Out of Bounds': 'LineString',
         'Penalty Area Yellow': 'Polygon',
-        'Penalty Area Red':    'Polygon',
+        'Penalty Area Red': 'Polygon',
     };
 
     // Course-scoped POIs: shared across holes, stored once per course
@@ -50,13 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
         'Road', 'Water', 'Trees', 'Out of Bounds', 'Penalty Area Yellow', 'Penalty Area Red'
     ]);
 
-    const HOLE_POI_LIST   = Object.keys(POI_COLORS).filter(p => !COURSE_SCOPED_POIS.has(p));
+    const HOLE_POI_LIST = Object.keys(POI_COLORS).filter(p => !COURSE_SCOPED_POIS.has(p));
     const COURSE_POI_LIST = Object.keys(POI_COLORS).filter(p => COURSE_SCOPED_POIS.has(p));
     const GEO_LIST = ['Point', 'LineString', 'Polygon'];
 
-    const KEY_SESSION      = 'golfMapper_session';
-    const KEY_ALL          = 'golfMapper_allFeatures';
-    const KEY_HOLE_CACHE   = 'golfMapper_holeCache';
+    const KEY_SESSION = 'golfMapper_session';
+    const KEY_ALL = 'golfMapper_allFeatures';
+    const KEY_HOLE_CACHE = 'golfMapper_holeCache';
     const KEY_COURSE_CACHE = 'golfMapper_courseCache';
 
     // ================================================================
@@ -77,20 +77,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // DOM REFS
     // ================================================================
     const $ = id => document.getElementById(id);
-    const holeFieldsContainer   = $('holeFieldsContainer');
-    const courseFieldsContainer  = $('courseFieldsContainer');
-    const clubSelect       = $('clubSelect');
-    const courseSelect     = $('courseSelect');
-    const holeInput        = $('holeInput');
+    const holeFieldsContainer = $('holeFieldsContainer');
+    const courseFieldsContainer = $('courseFieldsContainer');
+    const clubSelect = $('clubSelect');
+    const courseSelect = $('courseSelect');
+    const holeInput = $('holeInput');
     const holeTotalDisplay = $('holeTotalDisplay');
-    const courseIdDisplay  = $('courseIdDisplay');
-    const totalFeatCount   = $('totalFeaturesCount');
-    const drawingBanner    = $('drawingBanner');
-    const drawingInfoText  = $('drawingInfoText');
-    const drawPointCount   = $('drawingPointCount');
-    const popup            = $('popup');
-    const jsonOutput       = $('jsonOutput');
-    const dropOverlay      = $('dropOverlay');
+    const courseIdDisplay = $('courseIdDisplay');
+    const totalFeatCount = $('totalFeaturesCount');
+    const drawingBanner = $('drawingBanner');
+    const drawingInfoText = $('drawingInfoText');
+    const drawPointCount = $('drawingPointCount');
+    const popup = $('popup');
+    const jsonOutput = $('jsonOutput');
+    const dropOverlay = $('dropOverlay');
 
     // ================================================================
     // CSV PARSING
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
             courseIdDisplay.textContent = '—'; holeTotalDisplay.textContent = '/ 18';
             return;
         }
-        appState.courseId   = sel.value;
+        appState.courseId = sel.value;
         appState.courseName = sel.textContent;
         appState.totalHoles = parseInt(sel.dataset.holes) || 18;
         courseIdDisplay.textContent = sel.value;
@@ -190,13 +190,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         return {
-            poi:           poiVal,
-            location:      row.querySelector('[name="location"]')?.value || 'C',
+            poi: poiVal,
+            location: row.querySelector('[name="location"]')?.value || 'C',
             sideOfFairway: row.querySelector('[name="sideOfFairway"]').value,
-            geometryType:  row.querySelector('[name="geometryType"]').value,
-            coordinates:   JSON.parse(row.dataset.coordinates || 'null'),
-            label:         extractedLabel,
-            teeIds:        teeIds
+            geometryType: row.querySelector('[name="geometryType"]').value,
+            coordinates: JSON.parse(row.dataset.coordinates || 'null'),
+            label: extractedLabel,
+            teeIds: teeIds
         };
     }
 
@@ -230,8 +230,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const raw = localStorage.getItem(KEY_SESSION);
             if (!raw) return false;
             const s = JSON.parse(raw);
-            appState = { clubId: s.clubId, courseId: s.courseId, courseName: s.courseName || '',
-                         hole: s.hole || 1, totalHoles: s.totalHoles || 18 };
+            appState = {
+                clubId: s.clubId, courseId: s.courseId, courseName: s.courseName || '',
+                hole: s.hole || 1, totalHoles: s.totalHoles || 18
+            };
             holeInput.value = appState.hole;
             holeTotalDisplay.textContent = `/ ${appState.totalHoles}`;
             if (appState.courseId) courseIdDisplay.textContent = appState.courseId;
@@ -332,7 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function polygonCentroid(ring) {
         let sumLng = 0, sumLat = 0;
         // Exclude closing vertex if ring is closed
-        const n = (ring[0][0] === ring[ring.length-1][0] && ring[0][1] === ring[ring.length-1][1]) ? ring.length - 1 : ring.length;
+        const n = (ring[0][0] === ring[ring.length - 1][0] && ring[0][1] === ring[ring.length - 1][1]) ? ring.length - 1 : ring.length;
         for (let i = 0; i < n; i++) { sumLng += ring[i][0]; sumLat += ring[i][1]; }
         return [parseFloat((sumLng / n).toFixed(7)), parseFloat((sumLat / n).toFixed(7))];
     }
@@ -352,15 +354,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 const [rlng, rlat] = ref;
                 let minD = Infinity, maxD = -Infinity;
                 ring.forEach(pt => {
-                    const d = (pt[0]-rlng)**2 + (pt[1]-rlat)**2;
+                    const d = (pt[0] - rlng) ** 2 + (pt[1] - rlat) ** 2;
                     if (d < minD) { minD = d; frontPt = pt; }
                     if (d > maxD) { maxD = d; backPt = pt; }
                 });
             }
             return [
                 { type: 'Feature', geometry: { type: 'Point', coordinates: frontPt }, properties: { ...base, location: 'F' } },
-                { type: 'Feature', geometry: { type: 'Point', coordinates: center  }, properties: { ...base, location: 'C' } },
-                { type: 'Feature', geometry: { type: 'Point', coordinates: backPt  }, properties: { ...base, location: 'B' } },
+                { type: 'Feature', geometry: { type: 'Point', coordinates: center }, properties: { ...base, location: 'C' } },
+                { type: 'Feature', geometry: { type: 'Point', coordinates: backPt }, properties: { ...base, location: 'B' } },
             ];
         }
 
@@ -374,14 +376,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const [rlng, rlat] = ref;
                 let minD = Infinity, maxD = -Infinity;
                 ring.forEach(pt => {
-                    const d = (pt[0]-rlng)**2 + (pt[1]-rlat)**2;
+                    const d = (pt[0] - rlng) ** 2 + (pt[1] - rlat) ** 2;
                     if (d < minD) { minD = d; frontPt = pt; }
                     if (d > maxD) { maxD = d; backPt = pt; }
                 });
             }
             return [
                 { type: 'Feature', geometry: { type: 'Point', coordinates: frontPt }, properties: { ...base, location: 'F' } },
-                { type: 'Feature', geometry: { type: 'Point', coordinates: backPt  }, properties: { ...base, location: 'B' } },
+                { type: 'Feature', geometry: { type: 'Point', coordinates: backPt }, properties: { ...base, location: 'B' } },
             ];
         }
 
@@ -424,9 +426,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getTeeBadgesHTML(teeIds = []) {
         if (!appState.courseId) return '<span style="font-size:10px; color:#888;">Select course first</span>';
-        const courseTees = teesData.filter(t => t.CourseID === String(appState.courseId)).sort((a,b) => parseInt(b.Length18 || 0) - parseInt(a.Length18 || 0));
+        const courseTees = teesData.filter(t => t.CourseID === String(appState.courseId)).sort((a, b) => parseInt(b.Length18 || 0) - parseInt(a.Length18 || 0));
         if (courseTees.length === 0) return '<span style="font-size:10px; color:#888;">No tees found on course</span>';
-        
+
         const arrIds = teeIds || [];
         const badges = courseTees.map(t => {
             const isActive = arrIds.includes(parseInt(t.TeeID, 10)) ? ' active' : '';
@@ -438,19 +440,19 @@ document.addEventListener('DOMContentLoaded', () => {
     function refreshRowTees(row) {
         const teeGrp = row.querySelector('.tee-field-group');
         if (!teeGrp) return;
-        
+
         // Temporarily get current selected IDs if any
         const currentIds = [...row.querySelectorAll('.tee-badge.active')].map(b => parseInt(b.dataset.teeid, 10));
-        
+
         const label = teeGrp.querySelector('label');
         teeGrp.innerHTML = '';
         if (label) teeGrp.appendChild(label);
-        
+
         const container = document.createElement('div');
         container.innerHTML = getTeeBadgesHTML(currentIds);
         const badgeList = container.querySelectorAll('.tee-badge');
         teeGrp.appendChild(container.firstElementChild);
-        
+
         // Re-attach listeners to the previously captured badges
         badgeList.forEach(badge => {
             badge.addEventListener('click', () => {
@@ -486,9 +488,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="field-group">
                     <label>Location</label>
                     <select name="location">
-                        <option value="F"${location==='F'?' selected':''}>Front</option>
-                        <option value="C"${location==='C'?' selected':''}>Middle</option>
-                        <option value="B"${location==='B'?' selected':''}>Back</option>
+                        <option value="F"${location === 'F' ? ' selected' : ''}>Front</option>
+                        <option value="C"${location === 'C' ? ' selected' : ''}>Middle</option>
+                        <option value="B"${location === 'B' ? ' selected' : ''}>Back</option>
                     </select>
                 </div>
                 <div class="field-group field-group--wide label-field-group" style="display: ${displayLabel}; padding-top: 4px;">
@@ -529,9 +531,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="field-group">
                     <label>Side</label>
                     <select name="sideOfFairway">
-                        <option value="L"${sideOfFairway==='L'?' selected':''}>Left</option>
-                        <option value="C"${sideOfFairway==='C'?' selected':''}>Center</option>
-                        <option value="R"${sideOfFairway==='R'?' selected':''}>Right</option>
+                        <option value="L"${sideOfFairway === 'L' ? ' selected' : ''}>Left</option>
+                        <option value="C"${sideOfFairway === 'C' ? ' selected' : ''}>Center</option>
+                        <option value="R"${sideOfFairway === 'R' ? ' selected' : ''}>Right</option>
                     </select>
                 </div>
                 <div class="field-group">
@@ -608,7 +610,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 teeGrp.style.display = poiSel.value === 'Tee' ? 'flex' : 'none';
                 if (poiSel.value === 'Tee') refreshRowTees(row);
             }
-            
+
             const entry = mapLayers.find(m => m.row === row);
             if (entry) {
                 if (oldGeo !== geoSel.value) {
@@ -624,9 +626,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             saveState();
         });
-        
-        geoSel.addEventListener('change', () => { 
-            syncStyle(); 
+
+        geoSel.addEventListener('change', () => {
+            syncStyle();
             const entry = mapLayers.find(m => m.row === row);
             if (entry && entry.geometryType !== geoSel.value) {
                 map.hasLayer(entry.layer) && map.removeLayer(entry.layer);
@@ -635,7 +637,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 row.dataset.coordinates = '';
                 coordSpan.textContent = '—';
             }
-            saveState(); 
+            saveState();
         });
         row.querySelectorAll('select, input').forEach(s => s.addEventListener('change', saveState));
 
@@ -762,12 +764,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (pickCancel) pickCancel();
         if (drawSession) cancelDrawing();
         drawSession = { row, geoType, coordSpan, points: [], previewLayer: null, vertexMarkers: [] };
-        
+
         // Hide existing mapLayer to avoid duplicate visual and prepare for editing
         const idx = mapLayers.findIndex(m => m.row === row);
         if (idx !== -1) {
             if (map.hasLayer(mapLayers[idx].layer)) map.removeLayer(mapLayers[idx].layer);
-            mapLayers[idx].circles.forEach(c => { if(map.hasLayer(c)) map.removeLayer(c); });
+            mapLayers[idx].circles.forEach(c => { if (map.hasLayer(c)) map.removeLayer(c); });
             mapLayers.splice(idx, 1);
         }
 
@@ -786,7 +788,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         drawSession.points.pop();
                     }
                 }
-                
+
                 // Render editable vertex markers
                 drawSession.points.forEach(pt => {
                     const vm = L.circleMarker([pt[1], pt[0]], { radius: 4, fillColor: '#fff', color: '#3b82f6', weight: 2, fillOpacity: 1 }).addTo(map);
@@ -800,11 +802,11 @@ document.addEventListener('DOMContentLoaded', () => {
         map.getContainer().style.cursor = 'crosshair';
         drawingBanner.classList.remove('hidden');
         drawPointCount.textContent = `${drawSession.points.length} pts`;
-        
+
         if (drawSession.points.length > 0) {
             updateDrawPreview();
         }
-        
+
         updateDrawInfoText();
         if (drawType === 'freehand') {
             map.on('mousedown', onFreehandStart);
@@ -868,7 +870,7 @@ document.addEventListener('DOMContentLoaded', () => {
             coords = points;
         } else {
             const ring = [...points];
-            if (ring[0][0] !== ring[ring.length-1][0] || ring[0][1] !== ring[ring.length-1][1]) ring.push(ring[0]);
+            if (ring[0][0] !== ring[ring.length - 1][0] || ring[0][1] !== ring[ring.length - 1][1]) ring.push(ring[0]);
             coords = [ring];
         }
 
@@ -928,7 +930,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (points.length > 0) {
             const last = points[points.length - 1];
             const lastPx = map.latLngToContainerPoint(L.latLng(last[1], last[0]));
-            const curPx  = map.latLngToContainerPoint(e.latlng);
+            const curPx = map.latLngToContainerPoint(e.latlng);
             if (Math.hypot(lastPx.x - curPx.x, lastPx.y - curPx.y) < FREEHAND_MIN_PX) return;
         }
         addFreehandPoint(e.latlng);
@@ -975,7 +977,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (freehandActive) { map.dragging.enable(); freehandActive = false; }
         map.getContainer().style.cursor = '';
         drawingBanner.classList.add('hidden');
-        
+
         // Restore old visual layer if the row had valid coordinates unchanged
         if (row.dataset.coordinates) {
             try {
@@ -985,9 +987,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (mapLayers.findIndex(m => m.row === row) === -1) {
                     restoreLayer(row, geoType, coords, color, scope);
                 }
-            } catch(e) {}
+            } catch (e) { }
         }
-        
+
         drawSession = null;
     }
 
@@ -999,12 +1001,16 @@ document.addEventListener('DOMContentLoaded', () => {
         let added = 0;
         geojson.features.forEach(f => {
             if (!f.properties) return;
-            const key = JSON.stringify({ scope: f.properties.featureScope, courseId: f.properties.courseId,
+            const key = JSON.stringify({
+                scope: f.properties.featureScope, courseId: f.properties.courseId,
                 hole: f.properties.hole, poi: f.properties.poi, location: f.properties.location,
-                side: f.properties.sideOfFairway });
-            if (!allFeatures.some(x => JSON.stringify({ scope: x.properties.featureScope, courseId: x.properties.courseId,
+                side: f.properties.sideOfFairway
+            });
+            if (!allFeatures.some(x => JSON.stringify({
+                scope: x.properties.featureScope, courseId: x.properties.courseId,
                 hole: x.properties.hole, poi: x.properties.poi, location: x.properties.location,
-                side: x.properties.sideOfFairway }) === key)) {
+                side: x.properties.sideOfFairway
+            }) === key)) {
                 allFeatures.push(f); added++;
             }
         });
@@ -1029,32 +1035,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // ================================================================
     const QUICK = {
         // Hole-scoped (using prependToTop = true)
-        addGreenBunkerL:   () => addRow('Green Bunker',  'C', 'L', 'Polygon', null, 'hole', true),
-        addGreenBunkerC:   () => addRow('Green Bunker',  'C', 'C', 'Polygon', null, 'hole', true),
-        addGreenBunkerR:   () => addRow('Green Bunker',  'C', 'R', 'Polygon', null, 'hole', true),
-        addFairwayBunkerL: () => addRow('Fairway Bunker','C', 'L', 'Polygon', null, 'hole', true),
-        addFairwayBunkerC: () => addRow('Fairway Bunker','C', 'C', 'Polygon', null, 'hole', true),
-        addFairwayBunkerR: () => addRow('Fairway Bunker','C', 'R', 'Polygon', null, 'hole', true),
-        add100m:           () => addRow('100 Marker','C','C', null, null, 'hole', true),
-        add150m:           () => addRow('150 Marker','C','C', null, null, 'hole', true),
-        add200m:           () => addRow('200 Marker','C','C', null, null, 'hole', true),
-        addDogled:         () => [addRow('Dogleg','B','C', null, null, 'hole', true), addRow('Dogleg','F','L', null, null, 'hole', true)],
-        addTee:            () => addRow('Tee', 'C', 'C', 'Polygon', null, 'hole', true),
+        addGreenBunkerL: () => addRow('Green Bunker', 'C', 'L', 'Polygon', null, 'hole', true),
+        addGreenBunkerC: () => addRow('Green Bunker', 'C', 'C', 'Polygon', null, 'hole', true),
+        addGreenBunkerR: () => addRow('Green Bunker', 'C', 'R', 'Polygon', null, 'hole', true),
+        addFairwayBunkerL: () => addRow('Fairway Bunker', 'C', 'L', 'Polygon', null, 'hole', true),
+        addFairwayBunkerC: () => addRow('Fairway Bunker', 'C', 'C', 'Polygon', null, 'hole', true),
+        addFairwayBunkerR: () => addRow('Fairway Bunker', 'C', 'R', 'Polygon', null, 'hole', true),
+        add100m: () => addRow('100 Marker', 'C', 'C', null, null, 'hole', true),
+        add150m: () => addRow('150 Marker', 'C', 'C', null, null, 'hole', true),
+        add200m: () => addRow('200 Marker', 'C', 'C', null, null, 'hole', true),
+        addDogled: () => [addRow('Dogleg', 'B', 'C', null, null, 'hole', true), addRow('Dogleg', 'F', 'L', null, null, 'hole', true)],
+        addTee: () => addRow('Tee', 'C', 'C', 'Polygon', null, 'hole', true),
         // Course-scoped (using prependToTop = true)
-        addWaterL:         () => addRow('Water','C','L','Polygon', null, 'course', true),
-        addWaterC:         () => addRow('Water','C','C','Polygon', null, 'course', true),
-        addWaterR:         () => addRow('Water','C','R','Polygon', null, 'course', true),
-        addRoadL:          () => addRow('Road','C','L','LineString', null, 'course', true),
-        addRoadC:          () => addRow('Road','C','C','LineString', null, 'course', true),
-        addRoadR:          () => addRow('Road','C','R','LineString', null, 'course', true),
-        addOOB:            () => addRow('Out of Bounds','C','C','LineString', null, 'course', true),
-        addPenaltyYellow:  () => addRow('Penalty Area Yellow','C','C','Polygon', null, 'course', true),
-        addPenaltyRed:     () => addRow('Penalty Area Red','C','C','Polygon', null, 'course', true),
-        addTrees:          () => addRow('Trees','C','C', null, null, 'course', true),
+        addWaterL: () => addRow('Water', 'C', 'L', 'Polygon', null, 'course', true),
+        addWaterC: () => addRow('Water', 'C', 'C', 'Polygon', null, 'course', true),
+        addWaterR: () => addRow('Water', 'C', 'R', 'Polygon', null, 'course', true),
+        addRoadL: () => addRow('Road', 'C', 'L', 'LineString', null, 'course', true),
+        addRoadC: () => addRow('Road', 'C', 'C', 'LineString', null, 'course', true),
+        addRoadR: () => addRow('Road', 'C', 'R', 'LineString', null, 'course', true),
+        addOOB: () => addRow('Out of Bounds', 'C', 'C', 'LineString', null, 'course', true),
+        addPenaltyYellow: () => addRow('Penalty Area Yellow', 'C', 'C', 'Polygon', null, 'course', true),
+        addPenaltyRed: () => addRow('Penalty Area Red', 'C', 'C', 'Polygon', null, 'course', true),
+        addTrees: () => addRow('Trees', 'C', 'C', null, null, 'course', true),
     };
 
     document.querySelectorAll('.quick-btn').forEach(btn => {
-        btn.addEventListener('click', () => { 
+        btn.addEventListener('click', () => {
             const action = QUICK[btn.dataset.action];
             if (action) {
                 const result = action();
@@ -1087,7 +1093,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     courseSelect.addEventListener('change', () => { updateCourseMeta(); loadCourseRows(); saveState(); });
-    
+
     if ($('locateClubBtn')) {
         $('locateClubBtn').addEventListener('click', () => {
             const clubId = clubSelect.value;
