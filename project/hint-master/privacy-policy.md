@@ -1,86 +1,113 @@
 # Privacy Policy
 
-## Introduction
+**Effective date: July 28, 2026**
 
-Our privacy policy will help you understand what information we collect at **Hint Master**, how **Hint Master** uses it, and what choices you have.  
-**Hint Master** built the **Hint Master** app as a **free app**. This **Service** is provided by **Hint Master** at no cost and is intended for use as is.
+Hartvig Solutions ("we", "us", or "our") provides the **Hint Master** mobile
+application. This policy explains which data may be processed when you use the
+app, why it is processed, and the choices available to you.
 
-By using our Service, you agree to the collection and use of information in accordance with this policy.  
-The personal information we collect is used to provide and improve the Service. We do **not** use or share your information with anyone except as described in this Privacy Policy.
+Hint Master does not require an account. We do not ask for your name, email
+address, gender, profile picture, contacts, or precise location in the app.
 
-Terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, accessible on our website, unless otherwise defined.
+## Data Processed
 
-## Information Collection and Use
+The following data may be processed by the app's service providers:
 
-For a better experience while using our Service, we may ask you to provide certain personally identifiable information, including but not limited to:
+### Advertising and app activity
 
-- Name  
-- Email address  
-- Gender  
-- Location  
-- Profile pictures  
+Google Mobile Ads may process:
 
-The information collected will be retained and used as described in this Privacy Policy.
+- Approximate location inferred from the device's IP address. Hint Master does
+  not request precise GPS location permission.
+- App interactions, such as ad views and interactions.
+- Advertising data used to display and measure ads.
+- Device or app identifiers made available by the operating system.
+- Diagnostic and performance information used to prevent fraud, maintain the
+  service, and measure reliability.
 
-The app may use third-party services that collect information used to identify you.
+Ad requests from Hint Master are configured as non-personalized. Publisher
+first-party identifiers are disabled, the app does not request Apple's App
+Tracking Transparency permission, and the Android version does not request the
+Advertising ID permission. We do not use this data to track you across apps or
+websites owned by other companies.
 
-## Cookies
+### Purchases
 
-Cookies are small files with a small amount of data that commonly serve as anonymous unique identifiers. These are sent to your browser from websites you visit and stored on your device.
+If you buy or restore the premium unlock, Apple App Store or Google Play
+processes the payment. RevenueCat processes purchase history, product
+identifiers, transaction status, and entitlement information so the app can
+unlock and restore your purchase. We do not receive or store your payment card
+details.
 
-This Service does **not** explicitly use cookies. However, third-party code and libraries used in the app may use cookies to collect information and improve their services.
+### Information stored on your device
 
-You can choose to accept or refuse cookies and be notified when a cookie is being sent.  
-**Note**: Refusing cookies may limit some functionalities of the Service.
+Hint Master stores app settings locally, including language, round duration,
+saved Chameleon player names, premium status, free tries, and the app launch
+count used to control when full-screen ads may begin. This information remains
+on your device unless required to verify a purchase with the services described
+above.
 
-## Location Information
+## How Data Is Used
 
-Some services may use location information transmitted from your mobile device.  
-We only use this information as necessary for the functionality of designated features.
+Data is processed only as needed to:
 
-## Device Information
-
-We may collect information from your device to:
-
-- Improve service quality  
-- Prevent fraud  
-
-This data **does not** include personally identifiable information.
+- Provide app functionality and restore purchases.
+- Display and measure non-personalized advertising.
+- Understand app and ad interactions.
+- Diagnose performance problems.
+- Prevent fraud, maintain security, and comply with legal obligations.
 
 ## Service Providers
 
-We may employ third-party companies and individuals to:
+Hint Master uses the following third-party services, which process data under
+their own privacy policies:
 
-- Facilitate our Service  
-- Provide the Service on our behalf  
-- Perform Service-related tasks  
-- Assist in analyzing how our Service is used  
+- [Google Mobile Ads](https://policies.google.com/technologies/ads)
+- [Google Privacy Policy](https://policies.google.com/privacy)
+- [RevenueCat Privacy Policy](https://www.revenuecat.com/privacy/)
+- [Apple Privacy Policy](https://www.apple.com/legal/privacy/)
+- [Google Play Privacy Policy](https://policies.google.com/privacy)
 
-These third parties may have access to your personal information **only** to perform tasks on our behalf and are obligated not to disclose or use it for any other purpose.
+These providers may process data in countries other than your own and apply
+their own retention periods and legal safeguards.
 
-## Security
+## Consent and Your Choices
 
-We value your trust in providing personal information and strive to use commercially acceptable means of protecting it.  
-However, no method of internet transmission or electronic storage is 100% secure. We cannot guarantee absolute security.
+Where required by law, the app presents Google's consent flow before mobile ads
+are initialized. Your operating system and app-store settings may also provide
+controls for identifiers, purchases, and advertising.
 
-## Children’s Privacy
+You may remove locally stored settings by deleting the app or clearing its app
+data. Because Hint Master does not create user accounts or maintain a user
+profile on Hartvig Solutions servers, there is normally no account record for
+us to delete.
 
-This Service does **not** address anyone under the age of 13.  
-We do **not knowingly** collect personally identifiable information from children under 13.  
-If we discover a child under 13 has provided us with personal information, we will delete it immediately.
+For questions, consent withdrawal, or a request concerning your data, contact
+us at [hintmaster@hartvigsolutions.com](mailto:hintmaster@hartvigsolutions.com).
+We will respond in accordance with applicable data-protection law and direct
+requests to the relevant service provider when necessary.
 
-If you are a parent or guardian and are aware your child has provided us with personal information, please contact us so we can take appropriate action.
+## Data Security
 
-## Changes to This Privacy Policy
+Data sent to the service providers listed above is encrypted in transit. No
+method of transmission or storage is completely secure, but we and our service
+providers use reasonable safeguards designed to protect processed data.
 
-We may update our Privacy Policy from time to time.  
-You are advised to review this page periodically for any changes.
+## Children's Privacy
 
-We will notify you of updates by posting the new Privacy Policy on this page.  
-Changes are effective immediately after being posted.
+Hint Master is intended for users aged 13 and over. We do not knowingly collect
+personal information directly from children under 13. If you believe a child
+has provided personal information through the app, contact us so we can review
+the request.
 
-## Contact Us
+## Changes to This Policy
 
-If you have any questions or suggestions about our Privacy Policy, please contact us:
+We may update this Privacy Policy when the app, its service providers, or legal
+requirements change. The effective date at the top of this page will be updated
+when changes are published.
 
-**Email**: [hintmaster@hartvigsolutions.com](mailto:hintmaster@hartvigsolutions.com)
+## Contact
+
+**Hartvig Solutions**
+
+Email: [hintmaster@hartvigsolutions.com](mailto:hintmaster@hartvigsolutions.com)
